@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="logo">PROJECT</div>
+            <div class="menu" id="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <img src="/image/1.PNG" alt="">
+            <img src="/image/2.PNG" alt="">
+            <img src="/image/3.PNG" alt="">
+            <img src="/image/4.PNG" alt="">
+            <img src="/image/5.PNG" alt="">
+            <img src="/image/6.PNG" alt="">
+            <img src="/image/7.PNG" alt="">
+            <img src="/image/8.PNG" alt="">
+        </div>
+        <div class="model">
+          <div class="conimg">
+            <span id="cross"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <img src="image/1.PNG" class="img">
+          </div>
+        </div>
+        <footer id="footer">
+            <div class="leftFooter">
+              <h1>THANKS</h1>
+              <h2>For Visit</h2>
+            </div>
+            <div class="midFooter">
+              <h1>PROJECT</h1>
+              <p>AJARpriyatam</p>
+            </div>
+            <div class="rightFooter">
+              <h4>Follow Us</h4>
+              <a href="https://www.instagram.com/">Instagram</a>
+              <a href="https://in.linkedin.com/">LinkedIn</a>
+              <a href="https://facebook.com/">Facebook</a>
+            </div>
+          </footer>
+    </div>
+    <script>
+      const image = document.querySelectorAll("img")
+      const model = document.querySelector(".model")
+      const img = document.querySelector(".img")
+      const cross = document.getElementById("cross")
+      image.forEach((image) =>{
+        image.addEventListener("click",()=>{
+          model.classList.add("display")
+          img.src=image.src;
+        })
+        cross.addEventListener("click",()=>{
+          model.classList.remove("display")
+        })
+      })
+      
+    </script>
+</body>
+
+</html>
